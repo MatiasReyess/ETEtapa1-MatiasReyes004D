@@ -1,0 +1,56 @@
+{% extends "base_generic.html" %}
+
+{% block content %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% load static %}
+    <title></title>
+
+</head>
+<body class="fondo">
+    <section style="margin-bottom: 1000px; margin-top: 50px;">
+        <div class="container">
+            <div class="row">
+                <h2>Colaboradores de la comunidad</h2>
+            </div>
+            <div class="container">
+                <table class="table" >
+                    <thead>
+                        <tr>
+                            <th scope="col">Rut</th>
+                            <th scope="col">Foto</th>
+                            <th scope="col">Nombre</th>
+                            <th score="col">Telefono</th>
+                            <th core="col">Direccion</th>
+                            <th scope="col">Email</th>
+                            <th score="col">Pais</th>
+                            <th core="col">Contra</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {%for co in colaborador%}
+                        <tr>
+                            <td>{{co.RutColab}}</th>
+                            <td>{{co.Fotografia}}</th>
+                            <td>{{co.Nombre}}</th>
+                            <td>{{co.Fono}}</th>
+                            <td>{{co.Direcc}}</th>
+                            <td>{{co.Email}}</th>
+                            <td>{{co.Pais}}</th>
+                            <td>{{co.Contra}}</th>
+                            
+                        </tr>
+                        {%endfor%}
+                    </tbody>
+                </table>
+                
+            </div>
+        </div>
+    </section>
+</body>
+</html>
+{% endblock %}
