@@ -4,7 +4,7 @@ from django.db import models
 
 class Colaborador(models.Model):
     RutColab = models.IntegerField(primary_key=True, verbose_name='Rut Colaborador')
-    Fotografia = models.ImageField(upload_to='img/' , verbose_name='Foto Del Colaborador')
+    Fotografia = models.ImageField(upload_to='img/',null=True,blank=True)
     Nombre = models.CharField(max_length=70, verbose_name='Nombre del Colaborador')
     Fono = models.IntegerField(verbose_name='Numbero de Telefono')
     Direcc = models.CharField(max_length=30, verbose_name='Direccion')

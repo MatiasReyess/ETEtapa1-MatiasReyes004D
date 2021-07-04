@@ -35,14 +35,17 @@
                         {%for co in colaborador%}
                         <tr>
                             <td>{{co.RutColab}}</th>
-                            <td>{{co.Fotografia}}</th>
+                            <td><img src="{{co.Fotografia.url}}" style="max-height: 220px ;max-width: 220px;"></th>
                             <td>{{co.Nombre}}</th>
                             <td>{{co.Fono}}</th>
                             <td>{{co.Direcc}}</th>
                             <td>{{co.Email}}</th>
                             <td>{{co.Pais}}</th>
                             <td>{{co.Contra}}</th>
-                            
+                            <td><a href="{% url 'modificar' co.RutColab%}" 
+                                class="btn btn-primary">Modificar</a></td>
+                            <td><a href="{% url 'eliminar' co.RutColab%}" 
+                                class="btn btn-danger">Eliminar</a></td>    
                         </tr>
                         {%endfor%}
                     </tbody>

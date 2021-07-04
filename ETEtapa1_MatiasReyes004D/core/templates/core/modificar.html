@@ -1,0 +1,34 @@
+{% extends "base_generic.html" %}
+
+{% block content %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% load static %}
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <h1 class="text-center">MODIFIQUE LOS COLABORADORES</h1>
+        </div>
+        <div class="row">
+            <form method="POST" action="#" id="formu">
+                {% csrf_token %}
+                <div class="form-group">
+                    {{form.as_table}}
+                </div>
+
+                <div class="form-group">
+                    <input type="submit" class="botones" value="Modificar">
+                    <input type="reset" class="botones" value="limpiar">
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
+{% endblock %}
